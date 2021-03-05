@@ -26,7 +26,11 @@ add_executable(keyboard_control src/keyboard_control.cpp)
 add_dependencies(keyboard_control ${catkin_EXPORTED_TARGETS})
 target_link_libraries(keyboard_control ${catkin_LIBRARIES})
 
-install(TARGETS keyboard_control
+add_executable(pub_velosity src/pub_velosity.cpp)
+add_dependencies(pub_velosity ${catkin_EXPORTED_TARGETS})
+target_link_libraries(pub_velosity ${catkin_LIBRARIES})
+
+install(TARGETS keyboard_control pub_velosity
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}

@@ -30,9 +30,9 @@
 namespace rotors_control {
 
 // Default values for the lee position controller and the Asctec Firefly.
-static const Eigen::Vector3d kDefaultPositionGain = Eigen::Vector3d(6, 6, 6);
-static const Eigen::Vector3d kDefaultVelocityGain = Eigen::Vector3d(4.7, 4.7, 4.7);
-static const Eigen::Vector3d kDefaultAttitudeGain = Eigen::Vector3d(3, 3, 0.035);
+static const Eigen::Vector3d kDefaultPositionGain    = Eigen::Vector3d(6, 6, 6);
+static const Eigen::Vector3d kDefaultVelocityGain    = Eigen::Vector3d(4.7, 4.7, 4.7);
+static const Eigen::Vector3d kDefaultAttitudeGain    = Eigen::Vector3d(3, 3, 0.035);
 static const Eigen::Vector3d kDefaultAngularRateGain = Eigen::Vector3d(0.52, 0.52, 0.025);
 
 class LeePositionControllerParameters {

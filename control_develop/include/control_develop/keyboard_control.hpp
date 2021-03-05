@@ -93,7 +93,9 @@ void keyboard_control::main()
     ros::NodeHandle nh("//firefly");
     trajectory_pub = nh.advertise<trajectory_msgs::MultiDOFJointTrajectory>(mav_msgs::default_topics::COMMAND_TRAJECTORY, 10);
     ROS_INFO("Start the way point publisher.");
-
+    std::cout<<" q  w  e       q: up   w: forward  e: down"<<std::endl;
+    std::cout<<" a  s  d       a: left s: stop     d: right"<<std::endl;
+    std::cout<<"    x          x: back "<<std::endl;
     while(ros::ok())
     {
         if(kbhit())
@@ -101,12 +103,12 @@ void keyboard_control::main()
         int key = readch();
         switch(key)
         {
-        case 56:
+        case 113:
             pos_z += 0.5;
             isChange = 1;
             printf("%d\n",key);
             break;
-        case 50://2
+        case 101://2
             pos_z -= 0.5;
             isChange = 1;
             printf("%d\n",key);
